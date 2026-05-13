@@ -6,7 +6,7 @@
   <title>Electric Technocracy: A Futurist Governance Vision Gains Attention | Singularity News</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="A growing online discussion is emerging around the idea of an Electric Technocracy — a proposed model of global governance built on artificial superintelligence, direct digital democracy, and fully automated infrastructure." />
+  <meta name="description" content="A growing online discussion is emerging around the idea of an Electric Technocracy - a proposed model of global governance built on artificial superintelligence, direct digital democracy, and fully automated infrastructure." />
   <meta name="keywords" content="Electric Technocracy, Electrocracy, Artificial Superintelligence, ASI, Digital Democracy, post-scarcity, futurism, technological singularity, AI governance, nanotechnology, human enhancement, global governance, technocracy, DDD, automation" />
   <meta name="author" content="Singularity News" />
   <meta name="robots" content="index, follow" />
@@ -25,35 +25,54 @@
   <style>
     /* ── CSS Variables ── */
     :root {
-      --blue-deep:   #00172e;
-      --blue-mid:    #003a6e;
-      --blue-bright: #0066cc;
-      --blue-elec:   #00aaff;
-      --blue-glow:   #33bbff;
-      --white:       #f5f8fc;
-      --off-white:   #e8eef5;
-      --text-body:   #cdd8e8;
-      --text-muted:  #7a93b0;
-      --border:      rgba(0,170,255,0.18);
-      --accent-line: #0066cc;
-      --tag-bg:      rgba(0,102,204,0.15);
+      --blue-deep:   #081b33;
+      --blue-mid:    #123c73;
+      --blue-bright: #1f5fae;
+      --blue-elec:   #2f6fcb;
+      --blue-glow:   #5d95e4;
+
+      --white:       #ffffff;
+      --off-white:   #f7f9fc;
+
+      --text-body:   #222222;
+      --text-main:   #111111;
+      --text-muted:  #667080;
+
+      --border:      rgba(10,35,66,0.10);
+      --accent-line: #1f5fae;
+
+      --tag-bg:      rgba(31,95,174,0.08);
+
+      --card-bg:     #f5f8fc;
+      --card-bg-alt: #eef4fb;
+
       --mono:        'IBM Plex Mono', monospace;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      background-color: var(--blue-deep);
+      background-color: var(--white);
       background-image:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,102,204,0.22) 0%, transparent 70%),
+        radial-gradient(
+          ellipse 80% 50% at 50% -10%,
+          rgba(31,95,174,0.05) 0%,
+          transparent 70%
+        ),
         repeating-linear-gradient(
           0deg,
           transparent,
           transparent 39px,
-          rgba(0,170,255,0.04) 39px,
-          rgba(0,170,255,0.04) 40px
+          rgba(31,95,174,0.025) 39px,
+          rgba(31,95,174,0.025) 40px
         );
       color: var(--text-body);
       font-family: 'IBM Plex Sans', sans-serif;
@@ -64,7 +83,7 @@
 
     /* ── TOP BAR ── */
     .topbar {
-      background: rgba(0,10,25,0.92);
+      background: rgba(255,255,255,0.96);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px);
       position: sticky;
@@ -75,6 +94,7 @@
       align-items: center;
       justify-content: space-between;
       height: 56px;
+      box-shadow: 0 2px 10px rgba(10,35,66,0.04);
     }
 
     .back-btn {
@@ -89,29 +109,44 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       padding: 0.35rem 0.85rem;
-      border: 1px solid rgba(0,170,255,0.3);
-      border-radius: 3px;
-      transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+      border: 1px solid rgba(31,95,174,0.18);
+      border-radius: 5px;
+      background: #ffffff;
+      transition:
+        background 0.2s,
+        border-color 0.2s,
+        color 0.2s,
+        box-shadow 0.2s;
     }
+
     .back-btn:hover {
-      background: rgba(0,170,255,0.12);
+      background: rgba(31,95,174,0.08);
       border-color: var(--blue-elec);
-      color: #fff;
-      box-shadow: 0 0 14px rgba(0,170,255,0.25);
+      color: var(--blue-deep);
+      box-shadow: 0 0 14px rgba(31,95,174,0.10);
     }
-    .back-btn:active { transform: scale(0.97); }
-    .back-btn svg { flex-shrink: 0; }
+
+    .back-btn:active {
+      transform: scale(0.97);
+    }
+
+    .back-btn svg {
+      flex-shrink: 0;
+    }
 
     .site-id {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.45rem;
       letter-spacing: 0.12em;
-      color: var(--white);
+      color: var(--blue-deep);
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
     }
-    .site-id span { color: var(--blue-elec); }
+
+    .site-id span {
+      color: var(--blue-elec);
+    }
 
     .topbar-date {
       font-family: var(--mono);
@@ -132,7 +167,7 @@
     .category-tag {
       display: inline-block;
       background: var(--tag-bg);
-      border: 1px solid rgba(0,170,255,0.3);
+      border: 1px solid rgba(31,95,174,0.18);
       border-left: 3px solid var(--blue-elec);
       color: var(--blue-elec);
       font-family: var(--mono);
@@ -142,17 +177,19 @@
       text-transform: uppercase;
       padding: 0.28rem 0.8rem;
       margin-bottom: 1.4rem;
+      border-radius: 4px;
     }
 
     h1.headline {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2rem, 5vw, 3.1rem);
       font-weight: 400;
-      color: var(--white);
+      color: var(--blue-deep);
       line-height: 1.18;
       margin-bottom: 1.2rem;
       letter-spacing: -0.01em;
     }
+
     h1.headline em {
       font-style: italic;
       color: var(--blue-glow);
@@ -163,8 +200,10 @@
       color: var(--text-body);
       line-height: 1.7;
       max-width: 680px;
-      border-left: 2px solid var(--blue-mid);
-      padding-left: 1.1rem;
+      border-left: 3px solid var(--blue-mid);
+      background: #f8fbff;
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
       margin-bottom: 1.8rem;
     }
 
@@ -178,7 +217,10 @@
       color: var(--text-muted);
       letter-spacing: 0.04em;
     }
-    .meta-row .sep { color: rgba(0,170,255,0.3); }
+
+    .meta-row .sep {
+      color: rgba(31,95,174,0.25);
+    }
 
     /* ── LAYOUT ── */
     .page-wrapper {
@@ -200,7 +242,7 @@
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.5rem;
       letter-spacing: 0.1em;
-      color: var(--white);
+      color: var(--blue-deep);
       margin: 2.8rem 0 1.4rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid var(--border);
@@ -208,6 +250,7 @@
       align-items: center;
       gap: 0.6rem;
     }
+
     .section-heading::before {
       content: '';
       display: inline-block;
@@ -222,23 +265,33 @@
     .compare-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
+      gap: 1rem;
       margin: 1.8rem 0 2.2rem;
     }
 
     .compare-card {
-      background: rgba(0,20,50,0.7);
-      padding: 1.2rem 1.4rem;
-      transition: background 0.25s;
+      background: linear-gradient(
+        180deg,
+        var(--card-bg) 0%,
+        var(--card-bg-alt) 100%
+      );
+      padding: 1.3rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
       cursor: default;
+      box-shadow: 0 2px 10px rgba(10,35,66,0.04);
     }
+
     .compare-card:hover {
-      background: rgba(0,60,120,0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(10,35,66,0.08);
+      background: #f0f6fd;
     }
+
     .compare-card h3 {
       font-family: var(--mono);
       font-size: 0.8rem;
@@ -248,6 +301,7 @@
       color: var(--blue-elec);
       margin-bottom: 0.55rem;
     }
+
     .compare-card p {
       font-size: 0.93rem;
       color: var(--text-body);
@@ -257,29 +311,36 @@
 
     /* ── PULL QUOTE ── */
     .pull-quote {
-      border-left: 3px solid var(--blue-elec);
-      background: rgba(0,102,204,0.1);
+      border-left: 4px solid var(--blue-elec);
+      background: linear-gradient(
+        180deg,
+        rgba(31,95,174,0.06) 0%,
+        rgba(31,95,174,0.10) 100%
+      );
       margin: 2rem 0;
-      padding: 1.2rem 1.5rem;
-      border-radius: 0 4px 4px 0;
+      padding: 1.4rem 1.6rem;
+      border-radius: 0 12px 12px 0;
       position: relative;
+      box-shadow: 0 2px 10px rgba(10,35,66,0.05);
     }
+
     .pull-quote::before {
       content: '"';
       font-family: 'DM Serif Display', serif;
       font-size: 5rem;
-      color: rgba(0,170,255,0.12);
+      color: rgba(31,95,174,0.10);
       position: absolute;
       top: -0.5rem;
       left: 0.6rem;
       line-height: 1;
       pointer-events: none;
     }
+
     .pull-quote p {
       font-family: 'DM Serif Display', serif;
       font-size: 1.15rem;
       font-style: italic;
-      color: var(--off-white);
+      color: var(--blue-deep);
       margin: 0;
       line-height: 1.6;
       position: relative;
@@ -292,25 +353,38 @@
       margin: 1.2rem 0 1.8rem;
       display: flex;
       flex-direction: column;
-      gap: 0.7rem;
+      gap: 0.9rem;
     }
+
     .feature-list li {
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;
       font-size: 0.97rem;
       color: var(--text-body);
-      padding: 0.8rem 1.1rem;
-      background: rgba(0,20,50,0.55);
+      padding: 1rem 1.2rem;
+      background: linear-gradient(
+        180deg,
+        #f8fbff 0%,
+        #eef4fb 100%
+      );
       border: 1px solid var(--border);
-      border-radius: 3px;
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      border-radius: 10px;
+      transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(10,35,66,0.03);
     }
+
     .feature-list li:hover {
-      background: rgba(0,70,140,0.35);
-      border-color: rgba(0,170,255,0.4);
+      background: #edf5fd;
+      border-color: rgba(31,95,174,0.25);
       transform: translateX(4px);
+      box-shadow: 0 8px 18px rgba(10,35,66,0.06);
     }
+
     .feature-list li::before {
       content: '▶';
       color: var(--blue-elec);
@@ -321,18 +395,24 @@
 
     /* ── CAUTION BOX ── */
     .caution-box {
-      background: rgba(0,20,50,0.6);
-      border: 1px solid rgba(0,170,255,0.2);
-      border-top: 3px solid #ff6a00;
-      border-radius: 4px;
-      padding: 1.1rem 1.4rem;
+      background: linear-gradient(
+        180deg,
+        #fffaf5 0%,
+        #fff3e7 100%
+      );
+      border: 1px solid rgba(255,120,0,0.15);
+      border-top: 4px solid #ff6a00;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
       margin: 1.5rem 0;
       font-size: 0.93rem;
       color: var(--text-body);
       line-height: 1.65;
+      box-shadow: 0 2px 10px rgba(255,120,0,0.05);
     }
+
     .caution-box strong {
-      color: #ff8c3a;
+      color: #d96a00;
       font-family: var(--mono);
       font-size: 0.75rem;
       letter-spacing: 0.08em;
@@ -348,33 +428,49 @@
       gap: 0.7rem;
       margin: 1.8rem 0;
       text-decoration: none;
-      background: rgba(0,102,204,0.15);
-      border: 1px solid rgba(0,102,204,0.45);
-      border-radius: 4px;
-      padding: 0.85rem 1.3rem;
+      background: linear-gradient(
+        180deg,
+        #f4f8fe 0%,
+        #e8f0fb 100%
+      );
+      border: 1px solid rgba(31,95,174,0.18);
+      border-radius: 10px;
+      padding: 0.95rem 1.4rem;
       color: var(--blue-glow);
       font-family: var(--mono);
       font-size: 0.82rem;
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s;
+      transition:
+        background 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s,
+        color 0.2s,
+        transform 0.2s;
+      box-shadow: 0 2px 8px rgba(10,35,66,0.04);
     }
+
     .pdf-link-block:hover {
-      background: rgba(0,102,204,0.3);
+      background: #edf5fd;
       border-color: var(--blue-elec);
-      box-shadow: 0 0 20px rgba(0,170,255,0.2);
-      color: #fff;
+      box-shadow: 0 10px 22px rgba(31,95,174,0.10);
+      color: var(--blue-deep);
+      transform: translateY(-1px);
     }
-    .pdf-link-block:active { transform: scale(0.98); }
+
+    .pdf-link-block:active {
+      transform: scale(0.98);
+    }
+
     .pdf-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
-      background: rgba(0,170,255,0.12);
-      border-radius: 3px;
+      width: 34px;
+      height: 34px;
+      background: rgba(31,95,174,0.08);
+      border-radius: 6px;
       font-size: 1rem;
     }
 
@@ -382,14 +478,23 @@
     .divider {
       border: none;
       height: 1px;
-      background: linear-gradient(to right, transparent, var(--blue-mid), transparent);
-      margin: 2.5rem 0;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--blue-mid),
+        transparent
+      );
+      margin: 2.8rem 0;
     }
 
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      background: rgba(0,5,15,0.8);
+      background: linear-gradient(
+        180deg,
+        #f8fbff 0%,
+        #f2f7fd 100%
+      );
       padding: 3rem 1.5rem 2.5rem;
       margin-top: 3rem;
     }
@@ -411,27 +516,39 @@
     .footer-links {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 0.6rem;
+      gap: 1rem;
       margin-bottom: 2rem;
     }
 
     .footer-link-group {
-      background: rgba(0,20,50,0.5);
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f5f9fe 100%
+      );
       border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.75rem 1rem;
-      transition: background 0.2s, border-color 0.2s;
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+      box-shadow: 0 2px 10px rgba(10,35,66,0.04);
     }
+
     .footer-link-group:hover {
-      background: rgba(0,50,110,0.35);
-      border-color: rgba(0,170,255,0.35);
+      background: #edf5fd;
+      border-color: rgba(31,95,174,0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(10,35,66,0.06);
     }
 
     .footer-link-group .fl-label {
       display: block;
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--off-white);
+      color: var(--blue-deep);
       margin-bottom: 0.3rem;
       font-family: 'IBM Plex Sans', sans-serif;
     }
@@ -446,6 +563,7 @@
       transition: color 0.2s;
       margin-top: 0.18rem;
     }
+
     .footer-link-group a:hover {
       color: var(--blue-elec);
     }
@@ -454,7 +572,7 @@
       text-align: center;
       font-family: var(--mono);
       font-size: 0.7rem;
-      color: rgba(120,150,180,0.45);
+      color: rgba(90,100,120,0.65);
       letter-spacing: 0.05em;
       border-top: 1px solid var(--border);
       padding-top: 1.4rem;
@@ -462,8 +580,15 @@
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ── RESPONSIVE ── */
@@ -472,16 +597,35 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
     @media (max-width: 480px) {
-      .topbar { padding: 0 1rem; }
-      .site-id { font-size: 1.1rem; }
-      .topbar-date { display: none; }
-      .hero { padding: 2rem 1rem 2rem; }
-      .page-wrapper { padding: 2rem 1rem 3rem; }
-      h1.headline { font-size: 1.85rem; }
+      .topbar {
+        padding: 0 1rem;
+      }
+
+      .site-id {
+        font-size: 1.1rem;
+      }
+
+      .topbar-date {
+        display: none;
+      }
+
+      .hero {
+        padding: 2rem 1rem 2rem;
+      }
+
+      .page-wrapper {
+        padding: 2rem 1rem 3rem;
+      }
+
+      h1.headline {
+        font-size: 1.85rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- TOP BAR -->
@@ -492,17 +636,29 @@
       </svg>
       Index
     </a>
-    <div class="site-id">Singularity <span>News</span></div>
+
+    <div class="site-id">
+      Singularity <span>News</span>
+    </div>
+
     <div class="topbar-date" id="pub-date"></div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="category-tag">Futurism &amp; Technology</div>
-    <h1 class="headline"><em>Electric Technocracy:</em> A Futurist Governance Vision Gains Attention</h1>
+    <div class="category-tag">
+      Futurism &amp; Technology
+    </div>
+
+    <h1 class="headline">
+      <em>Electric Technocracy:</em>
+      A Futurist Governance Vision Gains Attention
+    </h1>
+
     <p class="deck">
-      A growing online discussion is emerging around the idea of an "Electric Technocracy" — a proposed model of global governance built on artificial superintelligence, direct digital democracy, and fully automated infrastructure.
+      A growing online discussion is emerging around the idea of an "Electric Technocracy" - a proposed model of global governance built on artificial superintelligence, direct digital democracy, and fully automated infrastructure.
     </p>
+
     <div class="meta-row">
       <span>Singularity News</span>
       <span class="sep">|</span>
@@ -519,81 +675,125 @@
       <p>
         While the concept remains speculative and far outside mainstream political or scientific consensus, it has attracted interest among futurists who see it as a potential pathway toward a technologically driven post-scarcity society.
       </p>
+
       <p>
-        The idea is outlined on a website describing the Electric Technocracy — or <em>Electrocracy</em> — which presents it as a radical alternative to traditional nation-state governance. According to the site, the system would combine Artificial Superintelligence (ASI) as an impartial executive decision-maker with Direct Digital Democracy (DDD) that allows citizens to vote continuously on global policies. The vision also includes advanced nanotechnology, universal basic income funded by automation, and large-scale human enhancement technologies.
+        The idea is outlined on a website describing the Electric Technocracy - or <em>Electrocracy</em> - which presents it as a radical alternative to traditional nation-state governance. According to the site, the system would combine Artificial Superintelligence (ASI) as an impartial executive decision-maker with Direct Digital Democracy (DDD) that allows citizens to vote continuously on global policies. The vision also includes advanced nanotechnology, universal basic income funded by automation, and large-scale human enhancement technologies.
       </p>
 
       <hr class="divider" />
 
       <!-- SECTION 1 -->
-      <h2 class="section-heading">How the Concept Compares to Today's Reality</h2>
+      <h2 class="section-heading">
+        How the Concept Compares to Today's Reality
+      </h2>
 
       <div class="compare-grid">
-        <div class="compare-card">
+      <div class="compare-card">
           <h3>🤖 Artificial Superintelligence</h3>
-          <p>Current AI systems — large language models, robotics, and machine-learning platforms — remain far from the level of general intelligence or autonomous global governance described in the vision. Today's AI is powerful in narrow tasks but lacks the reasoning, reliability, and safety guarantees required for political authority.</p>
+          <p>
+            Current AI systems - large language models, robotics, and machine-learning platforms - remain far from the level of general intelligence or autonomous global governance described in the vision. Today's AI is powerful in narrow tasks but lacks the reasoning, reliability, and safety guarantees required for political authority.
+          </p>
         </div>
+
         <div class="compare-card">
           <h3>🗳️ Digital Democracy</h3>
-          <p>Several countries experiment with e-voting, citizen assemblies, and participatory platforms, but none operate continuous global digital democracy. Security, identity verification, and political legitimacy remain major challenges.</p>
+          <p>
+            Several countries experiment with e-voting, citizen assemblies, and participatory platforms, but none operate continuous global digital democracy. Security, identity verification, and political legitimacy remain major challenges.
+          </p>
         </div>
+
         <div class="compare-card">
           <h3>🏭 Post-Scarcity Economy</h3>
-          <p>The idea of nanofactories producing goods on demand is still theoretical. Modern economies continue to rely on global supply chains, human labor, and resource constraints. Automation is advancing, but not at the scale required to eliminate scarcity.</p>
+          <p>
+            The idea of nanofactories producing goods on demand is still theoretical. Modern economies continue to rely on global supply chains, human labor, and resource constraints. Automation is advancing, but not at the scale required to eliminate scarcity.
+          </p>
         </div>
+
         <div class="compare-card">
           <h3>🧬 Human Enhancement</h3>
-          <p>Biotechnology and neurotechnology are progressing — gene therapies, brain-computer interfaces, and longevity research are active fields. However, the level of enhancement described (medical nanobots, aging reversal, global neural networks) remains speculative.</p>
+          <p>
+            Biotechnology and neurotechnology are progressing - gene therapies, brain-computer interfaces, and longevity research are active fields. However, the level of enhancement described (medical nanobots, aging reversal, global neural networks) remains speculative.
+          </p>
         </div>
+
         <div class="compare-card" style="grid-column: 1 / -1;">
           <h3>⚖️ Global Legal Transformation</h3>
-          <p>The website also links the concept to a 1998 German property deed, interpreting it as a trigger for a new global legal order. This interpretation is not recognized by any government, court, or academic institution, and experts in international law consider such claims unsupported.</p>
+          <p>
+            The website also links the concept to a 1998 German property deed, interpreting it as a trigger for a new global legal order. This interpretation is not recognized by any government, court, or academic institution, and experts in international law consider such claims unsupported.
+          </p>
         </div>
+
       </div>
 
       <hr class="divider" />
 
       <!-- SECTION 2 -->
-      <h2 class="section-heading">Could It Contribute to a Technological Singularity?</h2>
+      <h2 class="section-heading">
+        Could It Contribute to a Technological Singularity?
+      </h2>
 
       <p>
-        Some futurists argue that if humanity ever reaches a technological singularity — a point where AI surpasses human intelligence and accelerates progress beyond current comprehension — systems resembling an Electric Technocracy could theoretically emerge.
+        Some futurists argue that if humanity ever reaches a technological singularity - a point where AI surpasses human intelligence and accelerates progress beyond current comprehension - systems resembling an Electric Technocracy could theoretically emerge.
       </p>
 
       <div class="pull-quote">
-        <p>If AI ever surpasses human intelligence and accelerates progress beyond comprehension, centralized superintelligence governance may not be a fantasy — but its safety is far from guaranteed.</p>
+        <p>
+          If AI ever surpasses human intelligence and accelerates progress beyond comprehension, centralized superintelligence governance may not be a fantasy - but its safety is far from guaranteed.
+        </p>
       </div>
 
-      <p>Potential contributions to a singularity scenario include:</p>
+      <p>
+        Potential contributions to a singularity scenario include:
+      </p>
 
       <ul class="feature-list">
-        <li>Centralized ASI governance could accelerate scientific breakthroughs at unprecedented speed.</li>
-        <li>Automated resource management might reduce scarcity and eliminate large-scale conflict.</li>
-        <li>Global digital participation could create unified, real-time decision-making structures.</li>
-        <li>Advanced biotech and nanotech could push humanity toward radical longevity and cognitive expansion.</li>
+        <li>
+          Centralized ASI governance could accelerate scientific breakthroughs at unprecedented speed.
+        </li>
+
+        <li>
+          Automated resource management might reduce scarcity and eliminate large-scale conflict.
+        </li>
+
+        <li>
+          Global digital participation could create unified, real-time decision-making structures.
+        </li>
+
+        <li>
+          Advanced biotech and nanotech could push humanity toward radical longevity and cognitive expansion.
+        </li>
       </ul>
 
       <div class="caution-box">
         <strong>⚠ Expert Caution</strong>
+
         Many researchers warn that concentrating power in a single AI system could pose existential risks if not properly controlled. Achieving any of the above would require unprecedented advances in AI safety, global cooperation, and ethical governance frameworks.
       </div>
 
       <hr class="divider" />
 
       <!-- SECTION 3 -->
-      <h2 class="section-heading">A Vision, Not a Roadmap</h2>
+      <h2 class="section-heading">
+        A Vision, Not a Roadmap
+      </h2>
 
       <p>
-        The Electric Technocracy remains a speculative futurist model, not a policy proposal grounded in current institutions or technologies. It reflects a broader cultural fascination with AI-driven governance and post-scarcity futures — ideas that continue to inspire debate as artificial intelligence evolves.
+        The Electric Technocracy remains a speculative futurist model, not a policy proposal grounded in current institutions or technologies. It reflects a broader cultural fascination with AI-driven governance and post-scarcity futures - ideas that continue to inspire debate as artificial intelligence evolves.
       </p>
+
       <p>
         Whether such visions will ever leave the realm of speculation depends on the pace and direction of scientific progress, the resilience of democratic institutions, and humanity's capacity to align powerful systems with shared values.
       </p>
 
       <!-- PDF LINK -->
-      <a href="https://archive.org/details/electric-technocracy" target="_blank" rel="noopener noreferrer" class="pdf-link-block">
+      <a
+        href="https://archive.org/details/electric-technocracy"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pdf-link-block"
+      >
         <span class="pdf-icon">📄</span>
-        Electric Technocracy — Read Full PDF on Archive.org
+        Electric Technocracy - Read Full PDF on Archive.org
       </a>
 
     </article>
@@ -602,87 +802,171 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <p class="footer-heading">Related Networks &amp; Resources</p>
+
+      <p class="footer-heading">
+        Related Networks &amp; Resources
+      </p>
+
       <div class="footer-links">
 
         <div class="footer-link-group">
-          <span class="fl-label">🌐 WSD – Global Legal Succession Archive</span>
-          <a href="https://global-archive.rf.gd" target="_blank" rel="noopener">global-archive.rf.gd</a>
-          <a href="https://worldsold.wixsite.com/global-archive" target="_blank" rel="noopener">worldsold.wixsite.com/global-archive</a>
+          <span class="fl-label">
+            🌐 WSD – Global Legal Succession Archive
+          </span>
+
+          <a href="https://global-archive.rf.gd" target="_blank" rel="noopener">
+            global-archive.rf.gd
+          </a>
+
+          <a href="https://worldsold.wixsite.com/global-archive" target="_blank" rel="noopener">
+            worldsold.wixsite.com/global-archive
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🌐 Electric Technocracy</span>
-          <a href="https://ep.ct.ws" target="_blank" rel="noopener">ep.ct.ws</a>
-          <a href="https://worldsold.wixsite.com/electric-technocracy" target="_blank" rel="noopener">worldsold.wixsite.com/electric-technocracy</a>
+          <span class="fl-label">
+            🌐 Electric Technocracy
+          </span>
+
+          <a href="https://ep.ct.ws" target="_blank" rel="noopener">
+            ep.ct.ws
+          </a>
+
+          <a href="https://worldsold.wixsite.com/electric-technocracy" target="_blank" rel="noopener">
+            worldsold.wixsite.com/electric-technocracy
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🌐 WSD – Navigator 1400/98</span>
-          <a href="https://navi.page.gd" target="_blank" rel="noopener">navi.page.gd</a>
-          <a href="https://worldsold.wixsite.com/navigator" target="_blank" rel="noopener">worldsold.wixsite.com/navigator</a>
+          <span class="fl-label">
+            🌐 WSD – Navigator 1400/98
+          </span>
+
+          <a href="https://navi.page.gd" target="_blank" rel="noopener">
+            navi.page.gd
+          </a>
+
+          <a href="https://worldsold.wixsite.com/navigator" target="_blank" rel="noopener">
+            worldsold.wixsite.com/navigator
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🌐 WSD – International</span>
-          <a href="https://worldsold.wixsite.com/international" target="_blank" rel="noopener">worldsold.wixsite.com/international</a>
+          <span class="fl-label">
+            🌐 WSD – International
+          </span>
+
+          <a href="https://worldsold.wixsite.com/international" target="_blank" rel="noopener">
+            worldsold.wixsite.com/international
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🚦 WSD Age of Transition</span>
-          <a href="https://aitechnocracy.wixsite.com/age-of-transition" target="_blank" rel="noopener">aitechnocracy.wixsite.com/age-of-transition</a>
+          <span class="fl-label">
+            🚦 WSD Age of Transition
+          </span>
+
+          <a href="https://aitechnocracy.wixsite.com/age-of-transition" target="_blank" rel="noopener">
+            aitechnocracy.wixsite.com/age-of-transition
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🚦 Future Technocracy Navigator</span>
-          <a href="https://aitechnocracy.wixsite.com/future" target="_blank" rel="noopener">aitechnocracy.wixsite.com/future</a>
+          <span class="fl-label">
+            🚦 Future Technocracy Navigator
+          </span>
+
+          <a href="https://aitechnocracy.wixsite.com/future" target="_blank" rel="noopener">
+            aitechnocracy.wixsite.com/future
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">📚 International Treaty Law WIKI</span>
-          <a href="https://wiki.free.nf/" target="_blank" rel="noopener">wiki.free.nf</a>
+          <span class="fl-label">
+            📚 International Treaty Law WIKI
+          </span>
+
+          <a href="https://wiki.free.nf/" target="_blank" rel="noopener">
+            wiki.free.nf
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">📘 eBooks &amp; Free PDF Download</span>
-          <a href="https://4u.free.nf" target="_blank" rel="noopener">4u.free.nf</a>
+          <span class="fl-label">
+            📘 eBooks &amp; Free PDF Download
+          </span>
+
+          <a href="https://4u.free.nf" target="_blank" rel="noopener">
+            4u.free.nf
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🎥 YouTube Channel</span>
-          <a href="https://videos.xo.je" target="_blank" rel="noopener">videos.xo.je</a>
-          <a href="https://www.youtube.com/@Staatensukzessionsurkunde-1400" target="_blank" rel="noopener">youtube.com/@Staatensukzessionsurkunde-1400</a>
+          <span class="fl-label">
+            🎥 YouTube Channel
+          </span>
+
+          <a href="https://videos.xo.je" target="_blank" rel="noopener">
+            videos.xo.je
+          </a>
+
+          <a href="https://www.youtube.com/@Staatensukzessionsurkunde-1400" target="_blank" rel="noopener">
+            youtube.com/@Staatensukzessionsurkunde-1400
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🎙️ Podcast Show</span>
-          <a href="https://nwo.likesyou.org" target="_blank" rel="noopener">nwo.likesyou.org</a>
-          <a href="https://creators.spotify.com/pod/show/world-succession-deed" target="_blank" rel="noopener">Spotify: World Succession Deed</a>
+          <span class="fl-label">
+            🎙️ Podcast Show
+          </span>
+
+          <a href="https://nwo.likesyou.org" target="_blank" rel="noopener">
+            nwo.likesyou.org
+          </a>
+
+          <a href="https://creators.spotify.com/pod/show/world-succession-deed" target="_blank" rel="noopener">
+            Spotify: World Succession Deed
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🍏 Apple Podcast</span>
-          <a href="https://podcasts.apple.com/de/podcast/world-sold-world-succession-deed-1400-98-http-world/id1786462631" target="_blank" rel="noopener">Apple Podcasts: World Sold</a>
+          <span class="fl-label">
+            🍏 Apple Podcast
+          </span>
+
+          <a href="https://podcasts.apple.com/de/podcast/world-sold-world-succession-deed-1400-98-http-world/id1786462631" target="_blank" rel="noopener">
+            Apple Podcasts: World Sold
+          </a>
         </div>
 
         <div class="footer-link-group">
-          <span class="fl-label">🚀 Start-Page WSD &amp; Electric Paradise</span>
-          <a href="https://electric-paradise.start.page" target="_blank" rel="noopener">electric-paradise.start.page</a>
+          <span class="fl-label">
+            🚀 Start-Page WSD &amp; Electric Paradise
+          </span>
+
+          <a href="https://electric-paradise.start.page" target="_blank" rel="noopener">
+            electric-paradise.start.page
+          </a>
         </div>
 
       </div>
-      <p class="footer-copy">© <span id="copy-year"></span> Singularity News — All rights reserved. Speculative content is presented for informational and discussion purposes only.</p>
+
+      <p class="footer-copy">
+        © <span id="copy-year"></span>
+        Singularity News - All rights reserved.
+      </p>
+
     </div>
   </footer>
 
   <script>
-    // Dates
-    const now = new Date();
-    const opts = { year: 'numeric', month: 'long', day: 'numeric' };
-    const dateStr = now.toLocaleDateString('en-US', opts);
+    // Fixed custom date
+    const dateStr = "January 09, 2025";
+
     document.getElementById('article-date').textContent = dateStr;
     document.getElementById('pub-date').textContent = dateStr;
-    document.getElementById('copy-year').textContent = now.getFullYear();
+    document.getElementById('copy-year').textContent = "2025";
   </script>
+
 </body>
 </html>
